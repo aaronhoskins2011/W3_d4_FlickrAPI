@@ -45,7 +45,7 @@ public class FlickrListAdaptor extends RecyclerView.Adapter<FlickrListAdaptor.Vi
     @Override
     public void onBindViewHolder(FlickrListAdaptor.ViewHolder holder, int position) {
         final Item imageItem = item.get(position);
-        String imageUrl = imageItem.getLink();
+        String imageUrl = imageItem.getMedia().getM();
         Log.d("TAG", "onBindViewHolder: " + imageUrl);
         Glide.with(context.getApplicationContext())
                 .load(imageUrl)
